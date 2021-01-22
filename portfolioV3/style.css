@@ -11,15 +11,15 @@ Custom Properties, Update for your own design
 */
 
 :root {
-    --ff-primary: 'Source Sans Pro', sans-serif;
-    --ff-secondary: 'Source Sans Pro', monospace;
+    --ff-primary: 'Mandali', sans-serif;
+    --ff-secondary: 'Timmana', sans-serif;
 
-    --fw-reg: 300;
-    --fw-bold: 900;
+    --fw-reg: 400;
+    --fw-bold: 700;
 
-    --clr-light: #fff;
+    --clr-light: rgb(153, 175, 150);
     --clr-dark: #303030;
-    --clr-accent: #382; 
+    --clr-accent: rgb(50, 69, 241); 
 
     --fs-h1: 3rem;
     --fs-h2: 2.25rem;
@@ -44,9 +44,13 @@ Custom Properties, Update for your own design
 General Styles
 ########################
 */
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    background: var(--clr-light);
-    color: var(--clr-dark);
+    background: var(--clr-dark);
+    color: var(--clr-light);
     margin: 0;
     font-family: var(--ff-primary);
     font-size: var(--fs-body);
@@ -237,7 +241,7 @@ header {
 .hamburger,
 .hamburger::before,
 .hamburger::after {
-    background: var(--clr-dark);
+    background: var(--clr-accent);
     width: 2em;
     height: 3px;
     border-radius: 1em;
@@ -277,11 +281,11 @@ Intro Section
     .intro {
         display: grid;
         width: min-content;
-        margin: auto;
+        margin: 0 auto;
         grid-column-gap: 1em;
         grid-template-areas: 
-        "ing title"
-        "ing subtitle";
+        "img title"
+        "img subtitle";
         grid-template-columns: min-content max-content;
     }
     .intro__img {   
@@ -389,6 +393,7 @@ Who I am
     }
 
     .section__subtitle--about {
+        align-self: start;
         grid-column: 1 / -1;
         grid-row: 2;
         position: relative;
@@ -490,4 +495,21 @@ Footer
 
 .social-list__link {
     padding: .5em;
+}
+
+/* 
+########################
+Portfolio Item Individual
+########################
+*/
+.portfolio-item-individual {
+    padding: 0 2em 2em;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.portfolio-item-individual p {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
