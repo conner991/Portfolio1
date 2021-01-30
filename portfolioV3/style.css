@@ -17,9 +17,9 @@ Custom Properties, Update for your own design
     --fw-reg: 400;
     --fw-bold: 700;
 
-    --clr-light: rgb(153, 175, 150);
-    --clr-dark: #303030;
-    --clr-accent: rgb(50, 69, 241); 
+    --clr-light: rgb(81, 140, 155);
+    --clr-dark: #353232;
+    --clr-accent: rgb(82, 107, 187); 
 
     --fs-h1: 3rem;
     --fs-h2: 2.25rem;
@@ -311,7 +311,7 @@ Intro Section
 
 /* 
 ########################
-My Services
+What I do
 ########################
 */
 .my-services {
@@ -423,8 +423,13 @@ My Work
 }
 
 .portfolio {
-    display: grid;
+    display: flex;
+    position: center;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.portfolio__item-one {
+    position: center;
 }
 
 .portfolio__item {
